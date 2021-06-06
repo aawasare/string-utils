@@ -1,0 +1,52 @@
+{
+  "name": "string-utils",
+  "version": "1.0.0",
+  "description": "NodeJS-Typescript project that finds the count of all duplicate letters in a given string",
+  "main": "./src/stringOps",
+  "scripts": {
+    "start": "tsc && node ./src/stringOps",
+    "lint": "eslint . --ext .ts 'src/**/*.ts'",
+    "lintfix": "eslint 'src/**/*.ts' --quiet --fix",
+    "test": "jest",
+    "compile": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aawasare/string-utils.git"
+  },
+  "keywords": [],
+  "author": "Anirudha Awasare", 
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aawasare/string-utils/issues"
+  },
+  "homepage": "https://github.com/aawasare/string-utils#readme",
+  "devDependencies": {
+    "@types/jest": "26.0.23",
+    "@types/node": "15.12.1",
+    "@typescript-eslint/eslint-plugin": "4.26.0",
+    "@typescript-eslint/parser": "4.26.0",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "husky": "6.0.0",
+    "jest": "27.0.4",
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.1",
+    "ts-jest": "27.0.2",
+    "ts-node": "10.0.0",
+    "typescript": "4.3.2"
+  },
+  "dependencies": {}
+}
