@@ -23,7 +23,7 @@ describe('stringUtils Test Suite', () => {
     expect(result).toStrictEqual(mockData);
   });
 
-  test('should return blank JSON object when ano duplication found in string', () => {
+  test('should return blank JSON object when no duplication found in string', () => {
     const message = 'world';
     const mockData = { data: {} };
     const result = countDuplicateLettersInString(message);
